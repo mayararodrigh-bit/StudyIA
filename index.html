@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyIA - Seu Assistente de Estudos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="logo">📚 Study<span>IA</span></div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#tarefas">Minhas tarefas</a>
+            <a href="#materias">Matérias</a>
+            <a href="#assistente">Assistente IA</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="inicio" class="boas-vindas">
+            <div>
+                <span class="etiqueta">SEU ESPAÇO DE APRENDIZADO</span>
+                <h1>Olá! Vamos estudar? 💜</h1>
+                <p>Organize sua rotina, acompanhe suas atividades e alcance seus objetivos.</p>
+            </div>
+            <div class="ilustracao">🎓</div>
+        </section>
+
+        <section class="resumo">
+            <div class="card-resumo">
+                <span>📋</span>
+                <h3 id="totalTarefas">0</h3>
+                <p>Tarefas cadastradas</p>
+            </div>
+
+            <div class="card-resumo">
+                <span>✅</span>
+                <h3 id="tarefasConcluidas">0</h3>
+                <p>Tarefas concluídas</p>
+            </div>
+
+            <div class="card-resumo">
+                <span>⏳</span>
+                <h3 id="tarefasPendentes">0</h3>
+                <p>Tarefas pendentes</p>
+            </div>
+        </section>
+
+        <section id="tarefas" class="painel">
+            <h2>📝 Organize suas tarefas</h2>
+            <p>Cadastre suas atividades e acompanhe seu progresso.</p>
+
+            <form id="formTarefa">
+                <input type="text" id="nomeTarefa"
+                    placeholder="Nome da atividade..." required>
+
+                <select id="materiaTarefa" required>
+                    <option value="">Selecione a matéria</option>
+                    <option>Matemática</option>
+                    <option>Português</option>
+                    <option>Programação</option>
+                    <option>História</option>
+                    <option>Inglês</option>
+                    <option>Ciências</option>
+                    <option>Outras</option>
+                </select>
+
+                <input type="date" id="prazoTarefa" required>
+
+                <button type="submit">+ Adicionar tarefa</button>
+            </form>
+
+            <div class="lista-tarefas">
+                <h3>Minhas atividades</h3>
+                <div id="listaTarefas">
+                    <p class="vazio">Nenhuma tarefa cadastrada ainda.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="materias" class="painel">
+            <h2>📚 Minhas matérias</h2>
+            <p>Organize seus estudos por disciplina.</p>
+
+            <div class="grade-materias">
+                <div class="materia">📐 <h3>Matemática</h3></div>
+                <div class="materia">📖 <h3>Português</h3></div>
+                <div class="materia">💻 <h3>Programação</h3></div>
+                <div class="materia">🌎 <h3>História</h3></div>
+                <div class="materia">🇺🇸 <h3>Inglês</h3></div>
+                <div class="materia">🔬 <h3>Ciências</h3></div>
+            </div>
+        </section>
+
+        <section id="assistente" class="assistente">
+            <div class="icone-ia">🤖</div>
+            <h2>Assistente StudyIA</h2>
+            <p>Precisa de uma ajudinha para organizar seus estudos?</p>
+            <p id="dicaIA">Clique no botão para receber uma dica de estudo!</p>
+            <button id="btnDica">Gerar dica de estudo ✨</button>
+        </section>
+
+        <section class="progresso">
+            <h2>📊 Meu progresso</h2>
+            <p id="textoProgresso">Você ainda não concluiu nenhuma tarefa.</p>
+            <div class="barra-fundo">
+                <div id="barraProgresso"></div>
+            </div>
+            <span id="porcentagem">0% concluído</span>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>📚 StudyIA</h3>
+        <p>Seu aprendizado, sua evolução.</p>
+        <p>Projeto acadêmico desenvolvido com HTML, CSS e JavaScript.</p>
+        <p>© 2026 StudyIA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
